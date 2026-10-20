@@ -60,7 +60,8 @@ def load_dotenv(path: Path = ROOT / ".env") -> None:
         os.environ.setdefault(key, value)
 
 
-load_dotenv()
+if os.environ.get("HARNESS2_NO_DOTENV") != "1":
+    load_dotenv()
 
 
 def env(name: str, default=None):

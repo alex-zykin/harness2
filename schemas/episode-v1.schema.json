@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:harness2-business:episode:1.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "synthetic": {
+      "const": true
+    },
+    "episode_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$"
+    },
+    "instance_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$"
+    },
+    "product_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$"
+    },
+    "contact_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$"
+    },
+    "thread_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$"
+    },
+    "permission": {
+      "enum": [
+        "allowed",
+        "unknown",
+        "denied"
+      ]
+    },
+    "suppressed": {
+      "type": "boolean"
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$"
+        },
+        "kind": {
+          "enum": [
+            "inbound_email",
+            "reply",
+            "unsubscribe",
+            "quote_request",
+            "click"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "maxLength": 16000
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "text"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "synthetic",
+    "episode_id",
+    "instance_id",
+    "product_id",
+    "contact_id",
+    "thread_id",
+    "permission",
+    "suppressed",
+    "event"
+  ],
+  "additionalProperties": false
+}
