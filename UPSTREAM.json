@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "upstream_repository": "https://github.com/google-research/harness2",
+  "upstream_ref": "main",
+  "accepted_upstream_commit": "1cfe254e8d25b15f37048c3730134686abe60335",
+  "business_boundary_version": "1.0",
+  "business_release": "0.1.0-gated",
+  "promotion": "manual_review_only",
+  "offline_python_image": "python@sha256:fd95fa221297a88e1cf49c55ec1828edd7c5a428187e67b5d1805692d11588db",
+  "offline_python_tag_observed": "3.12.10-slim-bookworm",
+  "codex_host_version_observed": "0.104.0",
+  "codex_live_acceptance": false
+}

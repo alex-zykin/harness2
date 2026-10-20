@@ -1,0 +1,17 @@
+# Local experiment output and private state must never enter this public component.
+.run/
+runs/
+dependencies/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+secrets/
+credentials/
+auth.json
+*.key
+*.pem
+customer-data/
+localruns/

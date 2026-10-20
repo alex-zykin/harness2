@@ -1,3 +1,8 @@
+> **Business fork:** portable synthetic correspondence replay and a restricted, operator-gated
+> Codex profile are documented in [BUSINESS.md](docs/BUSINESS.md). Use that entrypoint for
+> business experiments. The original benchmark instructions below retain their upstream
+> execution settings, including sandbox bypass; they are not the business execution profile.
+
 <h3 align="center">
   <img src="assets/Harness2-wordmark.png" alt="Harness²" width="360"><br>
   Recursive Agent Harnessing for an Open World
